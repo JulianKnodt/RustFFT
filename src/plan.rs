@@ -882,7 +882,7 @@ mod unit_tests {
     }
 
     // This test is not designed to be run, only to compile.
-    // We cannot make it #[test] since there is a generic parameter.
+    #[cfg(test)]
     #[allow(dead_code)]
     fn test_impl_fft_planner_send<T: FftNum>() {
         fn is_send<T: Send>() {}
